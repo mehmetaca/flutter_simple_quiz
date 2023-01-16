@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_simple_quiz/components/question_view.dart';
-import 'package:flutter_simple_quiz/components/quiz_result_view.dart';
+import 'package:flutter_simple_quiz/widgets//question_view.dart';
+import 'package:flutter_simple_quiz/widgets//quiz_result_view.dart';
 import 'package:flutter_simple_quiz/models/question.dart';
 import 'package:flutter_simple_quiz/models/question_manager.dart';
 

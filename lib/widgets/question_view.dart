@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_simple_quiz/components/question_text_view.dart';
+import 'package:flutter_simple_quiz/widgets//question_text_view.dart';
 import 'package:flutter_simple_quiz/models/question.dart';
 
 import 'choice_view.dart';
