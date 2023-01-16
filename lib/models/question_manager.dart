@@ -5,6 +5,13 @@ class QuestionManager
 {
   List<Question> listQuestion = [
     Question(
+      questionText: 'Türkiye',
+      listQuestionChoise: [
+        QuestionChoice(choiceText: 'Ankara', isCorrect: true),
+        QuestionChoice(choiceText: 'Istanbul is the largest city in Turkey, serving as the country\'s economic, cultural and historic hub.', isCorrect: false),
+      ],
+    ),
+    Question(
         questionText: 'United States of America',
         listQuestionChoise: [
           QuestionChoice(choiceText: 'Washington', isCorrect: true),
@@ -29,15 +36,6 @@ class QuestionManager
         QuestionChoice(choiceText: 'Maracaibo', isCorrect: false),
         QuestionChoice(choiceText: 'Maracay', isCorrect: false),
         QuestionChoice(choiceText: 'Valencia', isCorrect: false),
-      ],
-    ),
-    Question(
-      questionText: 'Türkiye',
-      listQuestionChoise: [
-        QuestionChoice(choiceText: 'Ankara', isCorrect: true),
-        QuestionChoice(choiceText: 'Bursa', isCorrect: false),
-        QuestionChoice(choiceText: 'Istanbul', isCorrect: false),
-        QuestionChoice(choiceText: 'Izmir', isCorrect: false),
       ],
     ),
     Question(

@@ -10,6 +10,26 @@ class QuestionView extends StatelessWidget {
 
   const QuestionView({Key? key, required this.question, required this.onChoiceSelected}) : super(key: key);
 
+  Widget getChoiceList()
+  {
+    List<Widget> widgetList = [];
+    for(int i = 0; i<question.listQuestionChoise.length; i++)
+      {
+      widgetList.add(Container(
+        margin: const EdgeInsets.only(top:20.0),
+        child: ChoiceView(
+            text: question.listQuestionChoise.elementAt(i).choiceText,
+            onChoiceSelected: onChoiceSelected,
+            choiceIndex: i,
+          ),
+      ),);
+      }
+
+      return Column(
+        children: widgetList,
+      );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -22,30 +42,7 @@ class QuestionView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             QuestionTextView(text: question.questionText),
-            const SizedBox(height: 10,),
-            ChoiceView(
-              text: question.listQuestionChoise.elementAt(0).choiceText,
-              onChoiceSelected: onChoiceSelected,
-              choiceIndex: 0,
-            ),
-            const SizedBox(height: 10,),
-            ChoiceView(
-              text: question.listQuestionChoise.elementAt(1).choiceText,
-              onChoiceSelected: onChoiceSelected,
-              choiceIndex: 1,
-            ),
-            const SizedBox(height: 10,),
-            ChoiceView(
-              text: question.listQuestionChoise.elementAt(2).choiceText,
-              onChoiceSelected: onChoiceSelected,
-              choiceIndex: 2,
-            ),
-            const SizedBox(height: 10,),
-            ChoiceView(
-              text: question.listQuestionChoise.elementAt(3).choiceText,
-              onChoiceSelected: onChoiceSelected,
-              choiceIndex: 3,
-            ),
+            getChoiceList(),
           ],
         ),
       ),
